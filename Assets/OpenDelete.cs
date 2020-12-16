@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Open : MonoBehaviour
+public class OpenDelete : MonoBehaviour
 {
 
   public Button button;
   public GameObject window;
+  public GameObject submenu;
+  public GameObject blocker;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +24,9 @@ public class Open : MonoBehaviour
     {
         RectTransform transf = window.GetComponent<RectTransform>();
         transf.localScale = new Vector3(1,1,1);
+        RectTransform transfs = submenu.GetComponent<RectTransform>();
+        transfs.localScale = new Vector3(0,1,1);
+        RectTransform transfb = blocker.GetComponent<RectTransform>();
+        transfb.localScale = new Vector3(0,1,1);
     }
 }

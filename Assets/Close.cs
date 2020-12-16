@@ -19,6 +19,6 @@ public class Close : MonoBehaviour
     void TaskOnClick()
     {
         RectTransform transf = window.GetComponent<RectTransform>();
-        transf.localScale = new Vector3(1,0,1);
+        transf.localScale = new Vector3(0,1,1);
     }
 }
